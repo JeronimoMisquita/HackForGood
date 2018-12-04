@@ -1,0 +1,79 @@
+<!--
+  Generated template for the RechargeCardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-icon name="card" md="md-card" style="position: absolute;bottom: 13px;font-size: 30px;color:white;"></ion-icon>
+    <ion-title style="margin-left: 22px;">Recharge Card</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+
+   <ion-card>
+
+     <ion-card-header>
+       <b> My wallet </b>
+     </ion-card-header>
+
+     <ion-card-content>
+       <span style="font-size: x-small;"> Last Recharge : 20 - Jan - 2018 </span>
+       <div style="width: fit-content;position: absolute;right: 30px;top: 39px;">{{balance | currency:'INR':true }}</div>
+     </ion-card-content>
+
+   </ion-card>
+
+
+   <ion-card>
+
+
+
+
+
+     <ion-card-content>
+       <ion-grid>
+          <ion-row>
+            <ion-col col-4>
+              <ion-list>
+               <ion-item>
+                 <img src="assets/imgs/visa.png"/>
+                   Herbology
+                 <ion-icon name="rose" item-end></ion-icon>
+               </ion-item>
+             </ion-list>
+            </ion-col>
+            <ion-col col-4>
+              <ion-list>
+               <ion-item>
+                 <ion-icon name="leaf" item-start></ion-icon>
+                   Herbology
+                 <ion-icon name="rose" item-end></ion-icon>
+               </ion-item>
+             </ion-list>
+            </ion-col>
+            <ion-col col-4>
+              <ion-list>
+               <ion-item>
+                 <ion-icon name="leaf" item-start></ion-icon>
+                   Herbology
+                 <ion-icon name="rose" item-end></ion-icon>
+               </ion-item>
+             </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>This column will take 6 columns</ion-col>
+          </ion-row>
+      </ion-grid>
+     </ion-card-content>
+
+   </ion-card>
+
+</ion-content>

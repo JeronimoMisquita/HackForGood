@@ -1,5 +1,7 @@
 {
   "name": "codeForGood",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

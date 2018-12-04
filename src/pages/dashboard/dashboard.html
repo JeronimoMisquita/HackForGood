@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+   <img src="assets/imgs/HSBCEmpoweringCommunities.PNG"/>
+
+   <div>
+   <ion-grid style="border-top: 1px solid;padding-top: 26px;">
+     <ion-row>
+       <ion-col col-6>
+         <ion-row (click)="goToRecharge()">
+             <ion-col col-12 style="text-align: center;">
+                <ion-icon class="dashboardIcons" name="card" ></ion-icon>
+             </ion-col>
+           </ion-row>
+           <ion-row>
+               <ion-col col-12 style="text-align: center;">
+                 Recharge Card
+                  </ion-col>
+          </ion-row>
+      </ion-col>
+      <ion-col col-6>
+
+
+         <ion-row>
+             <ion-col col-12 style="text-align: center;">
+                <ion-icon class="dashboardIcons" name="create" ></ion-icon>
+             </ion-col>
+           </ion-row>
+           <ion-row>
+               <ion-col col-12 style="text-align: center;">
+                 Write Feedback
+                  </ion-col>
+          </ion-row>
+     </ion-col>
+
+
+
+       <ion-col col-6> </ion-col>
+     </ion-row>
+
+
+     <!-- next set-->
+
+     <ion-row>
+       <ion-col col-6>
+         <ion-row >
+             <ion-col col-12 style="text-align: center;">
+                <ion-icon class="dashboardIcons" name="bicycle"  md="md-bicycle" ></ion-icon>
+
+             </ion-col>
+           </ion-row>
+           <ion-row>
+               <ion-col col-12 style="text-align: center;">
+                 Order Home Delivery
+                  </ion-col>
+          </ion-row>
+      </ion-col>
+      <ion-col col-6>
+        <ion-row>
+            <ion-col col-12 style="text-align: center;">
+               <ion-icon class="dashboardIcons" name="locate" md="md-locate"s ></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-12 style="text-align: center;">
+                Track Water Delivery
+                 </ion-col>
+         </ion-row>
+     </ion-col>
+
+
+     </ion-row>
+
+</ion-grid>
+
+<ion-grid style="margin-top: 37px;">
+<ion-row>
+    <ion-col col-12 style="text-align: center;">
+       <ion-icon class="dashboardIcons" name="qr-scanner"  md="md-qr-scanner" ></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-12 style="text-align: center;">
+        Scan QR Code
+         </ion-col>
+ </ion-row>
+</ion-grid>
+</div>
+</ion-content>
