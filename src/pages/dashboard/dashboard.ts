@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {RechargeCardPage} from '../recharge-card/recharge-card'
+import {RechargeCardPage} from '../recharge-card/recharge-card';
+import {OrderPage} from '../order/order';
 /**
  * Generated class for the DashboardPage page.
  *
@@ -27,6 +28,9 @@ export class DashboardPage {
 
     this.navCtrl.push(RechargeCardPage);
 
+  }
+  goToOrder(){
+    this.navCtrl.push(OrderPage);
   }
 
 }

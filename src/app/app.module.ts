@@ -7,13 +7,19 @@ import {DashboardPage} from '../pages/dashboard/dashboard'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RechargeCardPage } from '../pages/recharge-card/recharge-card';
+import { OrderPage } from '../pages/order/order';
+import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
+import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
+import { Network } from '@ionic-native/network';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     DashboardPage,
-    RechargeCardPage
+    RechargeCardPage,
+    OrderPage
   ],
   imports: [
     BrowserModule,
@@ -24,12 +30,15 @@ import { RechargeCardPage } from '../pages/recharge-card/recharge-card';
     MyApp,
     HomePage,
     DashboardPage,
-    RechargeCardPage
+    RechargeCardPage,
+    OrderPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SplashScreen,Network,Geolocation,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConnectivityServiceProvider,
+    GoogleMapsProvider
   ]
 })
 export class AppModule {}
