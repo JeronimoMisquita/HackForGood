@@ -29,7 +29,7 @@ export class OrderPage {
     searchDisabled: boolean;
     saveDisabled: boolean;
     location: any;
-
+    google: any;
     constructor(public navCtrl: NavController, public zone: NgZone, public maps: GoogleMapsProvider, public platform: Platform, public geolocation: Geolocation, public viewCtrl: ViewController) {
         this.searchDisabled = true;
         this.saveDisabled = true;
