@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {RechargeCardPage} from '../recharge-card/recharge-card';
 import {OrderPage} from '../order/order';
+import {QrCodeReaderPage} from '../qr-code-reader/qr-code-reader'
 /**
  * Generated class for the DashboardPage page.
  *
@@ -32,5 +33,11 @@ export class DashboardPage {
   goToOrder(){
     this.navCtrl.push(OrderPage);
   }
+
+  goToQrScanner(){
+
+   this.navCtrl.push(QrCodeReaderPage);
+
+ }
 
 }

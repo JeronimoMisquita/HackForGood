@@ -13,6 +13,10 @@ import { ConnectivityServiceProvider } from '../providers/connectivity-service/c
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 import { Network } from '@ionic-native/network';
 import { Geolocation } from '@ionic-native/geolocation';
+import { PaymentSuccessPage } from '../pages/payment-success/payment-success';
+import { QrCodeReaderPage } from '../pages/qr-code-reader/qr-code-reader';
+import { QRScanner } from '@ionic-native/qr-scanner';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     DashboardPage,
     RechargeCardPage,
     OrderPage,
-    OrderconfirmPage
+    OrderconfirmPage,
+    PaymentSuccessPage,
+    QrCodeReaderPage
   ],
   imports: [
     BrowserModule,
@@ -34,9 +40,12 @@ import { Geolocation } from '@ionic-native/geolocation';
     DashboardPage,
     RechargeCardPage,
     OrderPage,
-    OrderconfirmPage
+    OrderconfirmPage,
+    PaymentSuccessPage,
+    QrCodeReaderPage
   ],
   providers: [
+    QRScanner,
     StatusBar,
     SplashScreen,Network,Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
