@@ -20,7 +20,7 @@ export class GoogleMapsProvider {
   mapLoaded: any;
   mapLoadedObserver: any;
   currentMarker: any;
-  apiKey: string = "YOUR_API_KEY";
+  apiKey: string = "AIzaSyDAz3acgis4qF7anZWHxpgzSNQTvkMGxfw";
 
   constructor(public connectivityService: ConnectivityServiceProvider, public geolocation: Geolocation) {
 

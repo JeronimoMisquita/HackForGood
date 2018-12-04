@@ -2,6 +2,7 @@ import { NavController, Platform, ViewController } from 'ionic-angular';
 import { Component, ElementRef, ViewChild, NgZone } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMapsProvider } from '../../providers/google-maps/google-maps';
+import { OrderconfirmPage } from '../orderconfirm/orderconfirm'
 /**
  * Generated class for the OrderPage page.
  *
@@ -68,10 +69,12 @@ export class OrderPage {
                 this.maps.map.setCenter({lat: location.lat, lng: location.lng});
 
                 this.location = location;
+                this.navCtrl.push(OrderconfirmPage,{data:location.name});
 
             });
 
         });
+
 
     }
 

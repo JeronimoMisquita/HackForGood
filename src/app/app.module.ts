@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RechargeCardPage } from '../pages/recharge-card/recharge-card';
 import { OrderPage } from '../pages/order/order';
+import { OrderconfirmPage } from '../pages/orderconfirm/orderconfirm';
 import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 import { Network } from '@ionic-native/network';
@@ -19,7 +20,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     HomePage,
     DashboardPage,
     RechargeCardPage,
-    OrderPage
+    OrderPage,
+    OrderconfirmPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     HomePage,
     DashboardPage,
     RechargeCardPage,
-    OrderPage
+    OrderPage,
+    OrderconfirmPage
   ],
   providers: [
     StatusBar,
