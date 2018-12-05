@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {PaymentSuccessPage} from '../payment-success/payment-success'
+
 /**
- * Generated class for the RechargeCardPage page.
+ * Generated class for the PaymentSuccessPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,29 @@ import {PaymentSuccessPage} from '../payment-success/payment-success'
 
 @IonicPage()
 @Component({
-  selector: 'page-recharge-card',
-  templateUrl: 'recharge-card.html',
+  selector: 'page-payment-success',
+  templateUrl: 'payment-success.html',
 })
-export class RechargeCardPage {
-  balance = 100;
+export class PaymentSuccessPage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RechargeCardPage');
+    console.log("Going to sleep ")
+
+    setTimeout(() =>
+    {
+      this.navCtrl.pop();
+    },
+3000);
+
+    console.log("Woke up ")
   }
 
-  recharge(){
-    this.navCtrl.push(PaymentSuccessPage);
+  redirect(){
+
+
 
   }
-
 }

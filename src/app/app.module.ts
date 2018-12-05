@@ -15,6 +15,9 @@ import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 import { Network } from '@ionic-native/network';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicStorageModule } from '@ionic/storage';
+import { PaymentSuccessPage } from '../pages/payment-success/payment-success';
+import { QrCodeReaderPage } from '../pages/qr-code-reader/qr-code-reader';
+import { QRScanner } from '@ionic-native/qr-scanner';
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { IonicStorageModule } from '@ionic/storage';
     OrderPage,
     OrderconfirmPage,
     TrackDeliveryPage
-  ],
+    PaymentSuccessPage,
+    QrCodeReaderPage],
   imports: [
     BrowserModule,
     IonicStorageModule.forRoot(),
@@ -41,8 +45,11 @@ import { IonicStorageModule } from '@ionic/storage';
     OrderPage,
     OrderconfirmPage,
     TrackDeliveryPage
-  ],
+    PaymentSuccessPage,
+    QrCodeReaderPage
+],
   providers: [
+    QRScanner,
     StatusBar,
     SplashScreen,Network,Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

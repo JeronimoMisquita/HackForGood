@@ -3,6 +3,10 @@ import { Component, ElementRef, ViewChild, NgZone } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMapsProvider } from '../../providers/google-maps/google-maps';
 import { OrderconfirmPage } from '../orderconfirm/orderconfirm'
+import { } from '@types/googlemaps';
+
+
+
 /**
  * Generated class for the OrderPage page.
  *

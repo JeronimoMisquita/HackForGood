@@ -82,8 +82,15 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+<<<<<<< HEAD
     <engine name="android" spec="7.1.4" />
     <plugin name="cordova-plugin-network-information" spec="2.0.1" />
     <plugin name="cordova-plugin-geolocation" spec="4.0.1" />
     <plugin name="cordova-sqlite-storage" spec="2.5.2" />
+=======
+    <plugin name="cordova-plugin-qrscanner" spec="2.6.0" />
+    <plugin name="cordova-plugin-network-information" spec="2.0.1" />
+    <plugin name="cordova-plugin-geolocation" spec="4.0.1" />
+    <engine name="android" spec="7.1.4" />
+>>>>>>> b118b313444b148ab1a47d298b730da65160b07c
 </widget>

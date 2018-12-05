@@ -38,40 +38,41 @@
 
 
      <ion-card-content>
+       <b>Payment By :</b>
        <ion-grid>
           <ion-row>
             <ion-col col-4>
-              <ion-list>
-               <ion-item>
-                 <img src="assets/imgs/visa.png"/>
-                   Herbology
-                 <ion-icon name="rose" item-end></ion-icon>
-               </ion-item>
-             </ion-list>
+              <div>
+
+                     <img class="payments" src="assets/imgs/visa.png" >
+                    <ion-radio class="radioCenter" value="visa" checked></ion-radio>
+
+              </div>
             </ion-col>
             <ion-col col-4>
-              <ion-list>
-               <ion-item>
-                 <ion-icon name="leaf" item-start></ion-icon>
-                   Herbology
-                 <ion-icon name="rose" item-end></ion-icon>
-               </ion-item>
-             </ion-list>
+              <div>
+              <img class="payments" src="assets/imgs/mastercard.png" >
+                <ion-radio class="radioCenter"  value="mastercard" ></ion-radio>
+              </div>
             </ion-col>
             <ion-col col-4>
-              <ion-list>
-               <ion-item>
-                 <ion-icon name="leaf" item-start></ion-icon>
-                   Herbology
-                 <ion-icon name="rose" item-end></ion-icon>
-               </ion-item>
-             </ion-list>
+              <div>
+              <img class="payments" src="assets/imgs/paytm.PNG" >
+                <ion-radio class="radioCenter"  value="paytm" ></ion-radio>
+              </div>
             </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-6>This column will take 6 columns</ion-col>
           </ion-row>
       </ion-grid>
+        <ion-list>
+
+      <ion-item>
+        <ion-input type="number" ion-text placeholder="Recharge Amount "></ion-input>
+
+      </ion-item>
+      </ion-list>
+      <div padding>
+        <button ion-button color="primary" (click)="recharge()" block>Recharge Wallet</button>
+        </div>
      </ion-card-content>
 
    </ion-card>
