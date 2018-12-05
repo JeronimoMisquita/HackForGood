@@ -15,3 +15,5 @@ npm install --save @ionic-native/geolocation
 npm install @types/google-maps --save
 
 ionic cordova plugin add cordova-plugin-advanced-http
+
+npm install --save @ionic-native/http
