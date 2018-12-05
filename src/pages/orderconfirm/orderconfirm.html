@@ -16,23 +16,29 @@
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      Address to Deliver Water-can
+        Order Details
     </ion-card-header>
-    <ion-card-content>
+    <ion-list>
+    <button ion-item>
+      <ion-icon ios="ios-home" md="md-home"></ion-icon>
       {{location_name}}
-      <br>
-      <ion-list>
-        <ion-grid>
-            <ion-row>
-              <ion-col>
-                <ion-icon name="md-remove-circle" (click)="decrement()"></ion-icon>
-                {{currentNumber}}
-                <ion-icon name="md-add-circle" (click)="increment()"></ion-icon>
-              </ion-col>
-            </ion-row>
-       </ion-grid>
-     </ion-list>
-    <button ion-button>Submit Request</button>
+    </button>
+
+      <ion-item>
+      <ion-icon ios="ios-water" md="md-water"></ion-icon>
+      Number of Cans: &nbsp;
+
+    <ion-icon name="remove-circle" (click)="decrement()"></ion-icon>
+    {{currentNumber}}
+    <ion-icon name="add-circle" (click)="increment()"></ion-icon>
+  </ion-item>
+      <button ion-item>
+     <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+     {{orderDetails.mobile}}
+     </button>
+  </ion-list>
+    <ion-card-content>
+      <button ion-button (click)="submit()">Submit Request</button>
     </ion-card-content>
   </ion-card>
 </ion-content>

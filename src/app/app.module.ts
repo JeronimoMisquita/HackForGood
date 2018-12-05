@@ -18,6 +18,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import { PaymentSuccessPage } from '../pages/payment-success/payment-success';
 import { QrCodeReaderPage } from '../pages/qr-code-reader/qr-code-reader';
 import { QRScanner } from '@ionic-native/qr-scanner';
+import { RestProvider } from '../providers/rest/rest';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { QRScanner } from '@ionic-native/qr-scanner';
   imports: [
     BrowserModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,7 +58,8 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     SplashScreen,Network,Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConnectivityServiceProvider,
-    GoogleMapsProvider
+    GoogleMapsProvider,
+    RestProvider
   ]
 })
 export class AppModule {}
