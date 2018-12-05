@@ -1,0 +1,13 @@
+insert into user(id,mobile,profile,address,balance) values(1,9421000000,'user','address', 20);
+insert into user(id,mobile,profile,address,balance) values(2,9421000002,'admin','address admin', 200);
+insert into user(id,mobile,profile,address,balance) values(3,9421000001,'user','address user 2', 20);
+insert into user(id,mobile,profile,address,balance) values(4,9421000003,'user','address user 3', 20);
+insert into user(id,mobile,profile,address,balance) values(5,9421000004,'user','address user 5', 0);
+insert into user(id,mobile,profile,address,balance) values(6,9421000005,'user','address user 6', 0);
+
+insert into feedback(id,mobile,comments,service,water) values(1,9421000000,'good',2, 3);
+insert into feedback(id,mobile,comments,service,water) values(2,9421000001,'excellent',3, 2);
+
+
+insert into canorder(id,mobile,cans,address) values(1,9421000000,'2','address');
+insert into canorder(id,mobile,cans,address) values(2,9421000001,'1','address');

@@ -1,0 +1,12 @@
+insert into feedback(id,mobile,comments,service,water) values(2,9421000001,'good','2', '3');
+insert into feedback(id,mobile,comments,service,water) values(3,9421000003,'good','2', '3');
+insert into feedback(id,mobile,comments,service,water) values(4,9421000004,'good','2', '3');
+insert into feedback(id,mobile,comments,service,water) values(5,9421000005,'good','2', '3');
+
+insert into order(id,mobile,cans,address) values(1,9421000000,'2','address of user');
+
+insert into canorder(id,mobile,cans,address) values(2,9421000001,'1','address');
+
+SELECT * FROM CANORDER;
+SELECT * FROM FEEDBACK;
+SELECT * FROM USER;
