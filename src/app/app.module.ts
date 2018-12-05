@@ -28,7 +28,7 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     RechargeCardPage,
     OrderPage,
     OrderconfirmPage,
-    TrackDeliveryPage
+    TrackDeliveryPage,
     PaymentSuccessPage,
     QrCodeReaderPage],
   imports: [
@@ -44,7 +44,7 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     RechargeCardPage,
     OrderPage,
     OrderconfirmPage,
-    TrackDeliveryPage
+    TrackDeliveryPage,
     PaymentSuccessPage,
     QrCodeReaderPage
 ],

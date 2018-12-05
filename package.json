@@ -63,11 +63,8 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-geolocation": {},
       "cordova-plugin-network-information": {},
-<<<<<<< HEAD
-      "cordova-sqlite-storage": {}
-=======
+      "cordova-sqlite-storage": {},
       "cordova-plugin-qrscanner": {}
->>>>>>> b118b313444b148ab1a47d298b730da65160b07c
     },
     "platforms": [
       "android"
