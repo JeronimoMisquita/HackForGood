@@ -9,10 +9,13 @@ import { HomePage } from '../pages/home/home';
 import { RechargeCardPage } from '../pages/recharge-card/recharge-card';
 import { OrderPage } from '../pages/order/order';
 import { OrderconfirmPage } from '../pages/orderconfirm/orderconfirm';
+import { TrackDeliveryPage } from '../pages/track-delivery/track-delivery'
 import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 import { Network } from '@ionic-native/network';
 import { Geolocation } from '@ionic-native/geolocation';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +24,12 @@ import { Geolocation } from '@ionic-native/geolocation';
     DashboardPage,
     RechargeCardPage,
     OrderPage,
-    OrderconfirmPage
+    OrderconfirmPage,
+    TrackDeliveryPage
   ],
   imports: [
     BrowserModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -34,7 +39,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     DashboardPage,
     RechargeCardPage,
     OrderPage,
-    OrderconfirmPage
+    OrderconfirmPage,
+    TrackDeliveryPage
   ],
   providers: [
     StatusBar,
