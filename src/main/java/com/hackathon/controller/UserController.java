@@ -37,11 +37,13 @@ public class UserController {
 		return userService.getUserProfile(mobile);
 	}
 
+	/* Get a users balance */
 	@GetMapping("/getUserBalance/{mobile}/")
 	public User getUserBalance(@PathVariable Long mobile) {
 		return userService.getUserBalance(mobile);
 	}
 
+	/* Direct update to a users balance when doing over the counter reacharge */
 	@PutMapping("/updateUserBalance/{mobile}/{balance}")
 	public User updateUserBalance(@PathVariable Long mobile, @PathVariable Long balance) {
 		User user = userService.getUser(mobile);
@@ -51,6 +53,7 @@ public class UserController {
 		return user;
 	}
 
+	/* Create a user */
 	// @PostMapping("/createUser/{mobile}/{balance}/{profile}/{address}")
 	// public User createNote(@Valid @RequestBody User user) {
 	// return userService.saveUser(user);
@@ -67,16 +70,19 @@ public class UserController {
 		return user;
 	}
 
+	/* Get all users feedbacks */
 	@GetMapping("/getUserFeedbacks/")
 	public List<Feedback> getUserFeedback() {
 		return userService.getUserFeedbacks();
 	}
 
+	/* Get average of feedbacks given by users */
 	@GetMapping("/getUserFeedbacksAverages/")
 	public FeedbackAverage getUserFeedbacksAverages() {
 		return userService.getUserFeedbacksAverages();
 	}
 
+	/* Save a users feedback */
 	@PostMapping("/saveFeedback/{mobile}/{comments}/{service}/{water}")
 	public Feedback savefeedback(@PathVariable Long mobile, @PathVariable String comments, @PathVariable Long service,
 			@PathVariable Long water) {
@@ -88,11 +94,13 @@ public class UserController {
 		return feedback;
 	}
 
+	/* Get all users order for water cans */
 	@GetMapping("/getUserOrders/")
 	public List<CanOrder> getUserOrders() {
 		return userService.getUserOrders();
 	}
 
+	/* Place orders for cans by users */
 	@PostMapping("/placeOrder/{mobile}/{cans}/{address}")
 	public CanOrder placeOrder(@PathVariable Long mobile, @PathVariable String cans, @PathVariable String address) {
 		canorder.setMobile(mobile);
@@ -100,6 +108,16 @@ public class UserController {
 		canorder.setAddress(address);
 		userService.saveOrder(canorder);
 		return canorder;
+	}
+
+	/* Recharge an users account after approval by admin */
+	@PutMapping("/approveUserBalance/{mobile}/{balance}")
+	public User approveUserBalance(@PathVariable Long mobile, @PathVariable Long balance) {
+		User user = userService.getUser(mobile);
+		Long newBalance = userService.updateBalance(mobile, balance);
+		user.setBalance(newBalance);
+		userService.saveUser(user);
+		return user;
 	}
 
 }

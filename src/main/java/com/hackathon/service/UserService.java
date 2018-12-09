@@ -81,4 +81,10 @@ public class UserService {
 		return feedbackAverage;
 	}
 
+	public Long updateBalance(Long mobile, Long balance) {
+		User user = userRepository.findBalanceByMobile(mobile);
+		Long oldBalance = user.getBalance();
+		return balance + oldBalance;
+	}
+
 }
