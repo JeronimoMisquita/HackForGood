@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hackathon.bean.CanOrder;
 import com.hackathon.bean.Feedback;
 import com.hackathon.bean.FeedbackAverage;
+import com.hackathon.bean.RechargeOrder;
 import com.hackathon.bean.User;
+import com.hackathon.service.RechargeService;
 import com.hackathon.service.UserService;
 
 @RestController
@@ -24,6 +26,9 @@ public class UserController {
 	private UserService userService;
 
 	@Autowired
+	private RechargeService rechargeService;
+
+	@Autowired
 	private User user;
 
 	@Autowired
@@ -31,6 +36,9 @@ public class UserController {
 
 	@Autowired
 	private CanOrder canorder;
+
+	@Autowired
+	private RechargeOrder rechargeOrder;
 
 	@GetMapping("/getUserProfile/{mobile}")
 	public User getUserProfile(@PathVariable Long mobile) {
@@ -110,14 +118,28 @@ public class UserController {
 		return canorder;
 	}
 
-	/* Recharge an users account after approval by admin */
+	/* Re charge an users account after approval by admin */
 	@PutMapping("/approveUserBalance/{mobile}/{balance}")
 	public User approveUserBalance(@PathVariable Long mobile, @PathVariable Long balance) {
 		User user = userService.getUser(mobile);
 		Long newBalance = userService.updateBalance(mobile, balance);
 		user.setBalance(newBalance);
 		userService.saveUser(user);
+		rechargeService.saveAsApproved(mobile);
 		return user;
 	}
 
+	/* List pending re charge approvals - 0 is pending */
+	@GetMapping("/pendingRecharge/")
+	public List<RechargeOrder> pendingRecharge() {
+		List<RechargeOrder> rechargeOrder = rechargeService.getPendingRecharge(0L);
+		return rechargeOrder;
+	}
+
+	/* List approved recharges - 1 is approved */
+	@GetMapping("/approvedRecharge/")
+	public List<RechargeOrder> approvedRecharge() {
+		List<RechargeOrder> rechargeOrder = rechargeService.getApprovedRecharge(1L);
+		return rechargeOrder;
+	}
 }

@@ -11,3 +11,8 @@ insert into feedback(id,mobile,comments,service,water) values(2,9421000001,'exce
 
 insert into canorder(id,mobile,cans,address) values(1,9421000000,'2','address');
 insert into canorder(id,mobile,cans,address) values(2,9421000001,'1','address');
+
+insert into recharge(id,mobile,amount,approved) values(1,9421000000,'20','0');
+insert into recharge(id,mobile,amount,approved) values(2,9421000001,'200','0');
+insert into recharge(id,mobile,amount,approved) values(3,9421000003,'120','1');
+insert into recharge(id,mobile,amount,approved) values(4,9421000004,'50','1');
